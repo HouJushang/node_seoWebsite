@@ -1,0 +1,5 @@
+﻿.topnav{background:#F88306;background-image: url(../../../images/8/nav_bg.gif);background-repeat: repeat-x;height: 50px;min-width:1050px;overflow: hidden;background-position: top;}
+.topnav .container{height: 50px;}
+.topnav .container .topnav ul li{float: left;height: 50px;padding-right: 0px;list-style-type:none;border-left:1px solid #FF6801;}
+.topnav .container .topnav ul li a{display: block;float: left;height: 50px;font-size: 14px;line-height: 50px;font-weight: bold;color: #FFFFFF;background-repeat: no-repeat;background-position: center;transition: all 0.2s ease-out 0s;-moz-transition: all 0.2s ease-out 0s;-webkit-transition: all 0.2s ease-out 0s; text-align:center;}
+.topnav .container .topnav ul li a:hover, .topnav .container .topnav ul li.Current{color: #FFF;background:#E35901;background-image: url(../../../images/8/nav_hover.gif);boder-left:1px solid #F77F07;text-decoration: none; transition: all 0.2s ease-out 0s;-moz-transition: all 0.2s ease-out 0s;-webkit-transition: all 0.2s ease-out 0s;}

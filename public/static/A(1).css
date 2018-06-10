@@ -1,0 +1,43 @@
+﻿/*首页百叶窗开始*/
+.ggLoading, .ggLoading2{background-image: none;background-color: transparent;}
+.gg{width: 100%;position: relative;z-index: 1;overflow: hidden;background: #d3d3d3 repeat-x;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.ggLoading{position: absolute; left: 40%; top: 200px; width: 325px; text-align: center; height: 56px; background-position: 0 -274px; background-repeat: no-repeat; line-height: 56px; color: #9c9c9c;}
+.ggLoading2{width: 330px; height: 56px; background-position: 213px -330px; background-repeat: no-repeat;}
+.ggLoading span{font-weight: bold;}
+.ggs{width: 200%;left: -50%;top: 0;position: absolute;}
+.ggBox{margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.ggBox a{display: block;position: absolute;z-index: 1;opacity: 0.1;}
+.ggBox img{display: block;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;}
+.ggb{position: absolute;width: 100%;left: 0;bottom: 0;height: 40px;z-index: 10000000;background-repeat: repeat-x;background-position: 50% -40px;}
+.ggBtns{width: 1000px;height: 40px;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.ggBtns a{float:left;text-align:left;display: block;width: 12px;height: 12px;text-align: center;font-size: 12px;line-height: 15px;background-position: 0 10px;position: relative;top:0px;/*left:400px;*/outline: none;background-repeat: no-repeat;cursor: pointer;font-family: Arial, Helvetica, sans-serif;font-weight: bold;margin-left: 10px;}
+.ggBtns a span{padding-bottom:2px;background-image:url(../../../images/8/em2.png);background-repeat: no-repeat;display: block;width: 12px;height: 12px;overflow: hidden;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.ggBtns a:hover{color: #e7e7e7;text-decoration: none;}
+.ggBtns a:focus{outline: none;}
+.ggBtns a.ggOn span{background-image:url(../../../images/8/em1.png);padding-bottom:1px;background-repeat: no-repeat;}
+/*首页百叶窗结束*/
+
+/*内页小百叶窗开始*/
+.main_banner .ggLoading, .ggLoading2{background-image: none;background-color: transparent;}
+.main_banner .gg{width: 100%;position: relative;z-index: 1;overflow: hidden;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;background-image: none;background-color: transparent;}
+.main_banner .ggLoading{position: absolute; left: 40%; top: 200px; width: 325px; text-align: center; height: 56px; background-position: 0 -274px; background-repeat: no-repeat; line-height: 56px; color: #9c9c9c;}
+.main_banner .ggLoading2{width: 330px; height: 56px; background-position: 213px -330px; background-repeat: no-repeat;}
+.main_banner .ggLoading span{font-weight: bold;}
+.main_banner .ggs{width: 200%;left: -50%;top: 0;position: absolute;}
+
+.main_banner .ggBox{margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.main_banner .ggBox a{display: block;position: absolute;z-index: 1;opacity: 0.1;}
+.main_banner .ggBox img{display: block;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;}
+.main_banner .ggb{position: absolute;width: 100%;left: 0;bottom: 0;height: 40px;z-index: 10000000;background-repeat: repeat-x;background-position: 50% -40px;}
+.main_banner .ggBtns{width: 1000px;height: 40px;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+
+.main_banner .ggBtns a{float: left;display: block;width: 12px;height: 12px;text-align: center;font-size: 12px;line-height: 15px;background-position: 0 10px;position: relative;top: 10px;outline: none;background-repeat: no-repeat;cursor: pointer;font-family: Arial, Helvetica, sans-serif;font-weight: bold;margin-left: 10px;} 
+.main_banner .ggBtns a span{padding-bottom:2px;background-image:url(../../../images/8/em2.png);background-repeat: no-repeat;display: block;width: 12px;height: 12px;overflow: hidden;margin-top: 0;margin-right: auto;margin-bottom: 0;margin-left: auto;}
+.main_banner .ggBtns a:hover{color: #e7e7e7;text-decoration: none;}
+.main_banner .ggBtns a:focus{outline: none;}
+.main_banner .ggBtns a.ggOn span{background-image:url(../../../images/8/em1.png) ;padding-bottom:1px;background-repeat: no-repeat;}
+/*内页百叶窗结束*/
+.right_a{ float:right;}
+
+.swf1{width: 100%;position: relative;z-index: 1;overflow: hidden;margin-right: auto;margin-left: auto; text-align:center;}
+.swfs{width: 200%;left: -50%;top: 0;position: absolute;}

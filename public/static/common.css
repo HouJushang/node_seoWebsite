@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+.WeChat,.MobileWeb{ position:relative; z-index:999999;display: inline-block;}
+
+.scan
+{
+	line-height: 31px;
+	height: 31px;
+	text-align: right;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	float: left;
+}
+.scan a:hover
+{
+	background-image: url() !important;
+	color: #000 !important;
+	text-decoration: none !important;	
+}
+.MobileWeb
+{
+    background-image: url(../../images/commonimg/MobileWeb.png);
+    /*margin-right: 10px;*/
+}
+
+.WeChat
+{
+    background-image: url(../../images/commonimg/WeChat.png);
+    /*margin-right: 20px;*/
+}
+
+.WeChat:hover .weixin,.MobileWeb:hover .Mobiletel{/* display:block;*/}
+
+.weixin ,.Mobiletel
+{
+    display:none;
+    position:absolute; 
+    float:left;
+    left:-5px;
+    top:28px;
+    z-index:999999;
+    min-width:140px;
+
+}
+
+.weixin img ,.Mobiletel img
+{
+	float:left;
+	padding:0px;
+    margin:0px;
+}
+
+.hidden-box{
+    border-top: 0;
+}
