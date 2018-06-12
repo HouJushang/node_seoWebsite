@@ -4,7 +4,7 @@ const indexHandle = require('./indexHandle')
 router.get('/:webSite/index.html', async (ctx) => {
     try {
         const webSiteId = ctx.params.webSite.split('-')[1];
-        const result =await indexHandle(webSiteId)
+        const result =await indexHandle(webSiteId, 'index')
         ctx.body = await ctx.render(result.template, result.data)
     } catch (e) {
         ctx.body = await ctx.render('error')

@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = _loadSequelize();
 const categoryModel = require('./categoryModel')
-const newsModel = sequelize.define('news', {
+const webSite = require('./webSiteModel')
+const productModel = sequelize.define('product', {
     id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
     image: { type: Sequelize.STRING, allowNull: true },
     title: { type: Sequelize.STRING, allowNull: false },
@@ -16,6 +17,13 @@ const newsModel = sequelize.define('news', {
             model: categoryModel,
             key: 'id',
         }
+    },
+    websiteId: {
+        type: Sequelize.INTEGER,
+        references: {
+            model: webSite,
+            key: 'id',
+        }
     }
 });
-module.exports = newsModel;
+module.exports = productModel;
