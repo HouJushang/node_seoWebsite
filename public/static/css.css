@@ -729,7 +729,7 @@ color: #666;font-size:14px;margin:16px 0px 16px 0px;border: 1px solid #E2E2E2;-m
 .gy .ry_box{float:right;width: 320px;height:350px;border: 1px solid #E2E2E2;}
 .gy .scrollbox1{height:318px;width:320px;}
 .gy .container{float: left;width: 230px;height: 315px;margin-left: 5px;}
-.gy_box{float: left;width: 660px;height: 308px;line-height:24px;border: 1px solid #E2E2E2;overflow: hidden;}
+.gy_box{ height: 308px;line-height:24px;border: 1px solid #E2E2E2;overflow: hidden; margin-bottom: 20px;}
 .gy_box .img_hover{padding:2px;border: 1px solid #E8E8E8;}
 .gy_box .img_hover:hover{border: 1px solid #FDAE02;}
 .gy_box .show_box img{margin-bottom: 8px;}

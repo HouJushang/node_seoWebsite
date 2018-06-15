@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0049)http://y200-2500-27.jz60.com/cn/index-925101.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
@@ -64,40 +63,16 @@
 
                 <div class="footer_box">
                     <div class="bottom d12">
-                        <div class="subnav wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <div id="subnav_f">
-                                <a title="网站首页" href="http://y200-2500-27.jz60.com/cn/index-925101.html">网站首页</a><a title="产品展示" href="http://y200-2500-27.jz60.com/cn/product-925101.html">产品展示</a><a title="客户见证" href="http://y200-2500-27.jz60.com/cn/singleclassimage-925101-1.html">客户见证</a><a title="公司动态" href="http://y200-2500-27.jz60.com/cn/categorypage-925101-1.html">公司动态</a><a title="在线下载" href="http://y200-2500-27.jz60.com/cn/down-925101.html">在线下载</a><a title="联系我们" href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html">联系我们</a>
-                            </div>
-                        </div>
-
-                        <div class="footer wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <div class="bottom_logo"><img src="/static/0_Y200-2500-27_0_11_20170929175626.gif" border="0" alt="logo"></div>
-                            <div class="copyright">
+                        <div class="footer wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s" style="text-align: center">
+                            {#<div class="bottom_logo"><img src="/static/0_Y200-2500-27_0_11_20170929175626.gif" border="0" alt="logo"></div>#}
                                 <p>
-                                    CopyRight © 2014 www.zk71.com All Rights Reserved. 深圳市综元量测精密仪器仪表公司<br>
-                                    咨询热线：0755-28095986 0755-27044610 电子邮箱：fuwangtuliao@163.com</p>
+                                    {{ webInfo.copyRight }} {{ webInfo.company }}<br>
+                                    咨询热线：{{ webInfo.phone }} 电子邮箱：{{ webInfo.email }}</p>
                                 <br>
-                            </div>
-                            <div class="approve"><img src="/static/0_Y200-2500-27_0_13_20170929175626.gif" border="0" alt="二维码"></div>
+                            {#<div class="approve"><img src="/static/0_Y200-2500-27_0_13_20170929175626.gif" border="0" alt="二维码"></div>#}
                             <div class="remove"></div>
                         </div>
                         <div class="zk_f wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <p>
-                                技术支持：<a href="http://www.jz60.com/" target="_brank" title="建站专家">建站专家</a> | <a href="http://www.zk71.com/" target="_brank" title="中科商务网">中科商务网</a>
-                                <script>
-                                    (function(){
-                                        var bp = document.createElement('script');
-                                        var curProtocol = window.location.protocol.split(':')[0];
-                                        if (curProtocol === 'https') {
-                                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                                        }
-                                        else {
-                                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                                        }
-                                        var s = document.getElementsByTagName("script")[0];
-                                        s.parentNode.insertBefore(bp, s);
-                                    })();
-                                </script>&nbsp;|&nbsp;<a href="http://login.jz60.com/?userinfo_id=925101" title="网站管理" target="_brank">网站管理</a></p>
                         </div>
                     </div>
                 </div>

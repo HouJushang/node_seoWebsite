@@ -6,35 +6,33 @@ const indexQuery = _loadQuery('indexQuery')
 const linkQuery = _loadQuery('linkQuery')
 const newsQuery = _loadQuery('newsQuery')
 
-module.exports = async function (websiteId, type) {
+module.exports = async function (websiteId, type, newsId) {
     const webInfo = webInfoQuery.getWebInfo(websiteId)
     const topCategory = categoryQuery.allTopCategory(websiteId)
-    const productCategory = categoryQuery.allIndexProductCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, type)
     const topProduct = productQuery.topList(websiteId)
-    const indexInfo = indexQuery.info(websiteId);
     const link = linkQuery.getAllLink(websiteId)
-    const allIndexNewsCategory = await categoryQuery.allIndexNewsCategory(websiteId)
-    allIndexNewsCategory.forEach(async item => {
-        item.newsList = await newsQuery.getNewsByCategoty(item.id, {
-            currentPage: 1,
-            pageSize: 9
-        })
-        item.firstNews = item.newsList.shift()
-    })
+    const allCategory = categoryQuery.allList(websiteId)
+    const topNewsCategory = categoryQuery.topNewsCategory(websiteId)
+    const newsDetail = await newsQuery.getDetail(newsId)
+
+
+    const currentCategory = categoryQuery.getDetail(newsDetail.categoryId)
+
     const result = {
-        template: 'index',
+        template: 'newsDetail',
         data: {
             websiteId,
-            allIndexNewsCategory,
-            indexInfo: await indexInfo,
+            newsDetail,
+            currentCategory: await currentCategory,
+            allCategory: await allCategory,
             topProduct: await topProduct,
             link: await link,
             banner: await banner,
             webInfo: await webInfo,
-            productCategory: await productCategory,
             topCategory: await topCategory,
-            categoryId: 'index'
+            topNewsCategory: await topNewsCategory,
+            currentCategory: await currentCategory
         }
     }
     return result
