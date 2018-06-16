@@ -110,7 +110,7 @@
                     <div class="profgh"></div>
                     <div class="y3_right_01 box_shadow">
                         <div class="block_title">
-                        <span class="location">
+                            <span class="location">
                             您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
                                     href="/w-{{ websiteId }}/newsl-{{ currentCategory.id }}.html"
                                     title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>

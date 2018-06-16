@@ -669,7 +669,7 @@ em{font-style: normal;}
 .nav_t_bg{display:block;position: relative;height:30px;background: url("../../images/8/b_bg.gif") 0px 0px no-repeat;}
 .y3_fl_left .left_nav li .nav_one{margin:4px 6px 4px 6px;background:#5C5D5E;border:1px solid #E99800;-moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px;}
 .y3_fl_left .left_nav li span a{padding-left: 30px;color:#FFF;}
-.y3_fl_left .left_nav li span.nav_one a:hover ,.y3_fl_left .left_nav li span.nav_one a.Current{color: #FFA100;text-decoration: none;background-image: url(../../images/8/nav_left_hover.gif)}
+.y3_fl_left .left_nav li span.nav_one a.Current{color: #FFA100;text-decoration: none;background-image: url(../../images/8/nav_left_hover.gif)}
 .y3_fl_left .left_nav li .ejfl{width: 210px;position: relative;padding: 0px;}
 .y3_fl_left .left_nav li .ejfl span{clear: both;float: none;padding: 0px;border-bottom:1px dashed #b2b2b2;background-repeat:repeat-x;background-position: bottom;line-height:38px;height: 38px;width: 190px;margin-top: 0px;margin-right: auto;margin-bottom: 0px;margin-left: auto;}
 .y3_fl_left .left_nav li .ejfl span:last-child{border:none;}

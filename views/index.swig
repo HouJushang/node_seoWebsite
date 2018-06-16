@@ -37,14 +37,15 @@
                                     {% if item.level == 1 %}
                                         <li>
                                             <div class="nav_title">
-                                                <a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html" title="产品分类">{{ item.name }}</a>
+                                                <a>{{ item.name }}</a>
                                             </div>
                                         </li>
                                     {% endif %}
                                     {% if item.level == 2 %}
                                         <li>
                                             <span class="nav_one">
-                                                <a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html" title="{{ item.name }}">{{ item.name }}</a></span>
+                                                <a>{{ item.name }}</a>
+                                            </span>
                                             <div class="ejfl">
                                                 {% for item in productCategory %}
                                                     {% if item.level == 3 %}

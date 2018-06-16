@@ -26,6 +26,16 @@ module.exports = class {
         })
     }
 
+    static allProductCategory(websiteId) {
+        return categoryModel.findAll({
+            where: {
+                type: 'product',
+                websiteId: websiteId
+            }
+        })
+    }
+
+
     static allIndexNewsCategory(websiteId) {
         return categoryModel.findAll({
             where: {
@@ -40,6 +50,8 @@ module.exports = class {
             }
         })
     }
+
+
 
     static getDetail(categoryId) {
         return categoryModel.findOne({
