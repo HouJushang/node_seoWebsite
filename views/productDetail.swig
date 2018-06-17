@@ -73,76 +73,8 @@
                                 {% endfor %}
                             </ul>
 
-                            <div class="cp_tj l_bot">
-                                <div class="block_title">
-                                    <div class="name left_name"><a title="热销产品">热销产品</a></div>
-                                </div>
-                                <div class="block_box">
-                                    <div class="left_hot_products">
-                                        <div>
-                                            <ul id="contentlisthot">
-                                                <li>
-                                                    <div class="pic"><span><a
-                                                                    href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858430-176451-206768.html"
-                                                                    title="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器"><img
-                                                                        src="/static/5_X200_20150716142135.jpg"
-                                                                        alt="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器"
-                                                                        border="0"></a></span></div>
-                                                    <p>
-                                                        <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858430-176451-206768.html"
-                                                           title="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器">三坐标|轮廓仪|光谱仪.</a></p></li>
-                                                <li>
-                                                    <div class="pic"><span><a
-                                                                    href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858438-176452-0.html"
-                                                                    title="综元量仪器表"><img
-                                                                        src="/static/5_X200357_20150714193318.jpg"
-                                                                        alt="综元量仪器表" border="0"></a></span></div>
-                                                    <p>
-                                                        <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858438-176452-0.html"
-                                                           title="综元量仪器表">综元量仪器表</a></p></li>
-                                                <li>
-                                                    <div class="pic"><span><a
-                                                                    href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858439-176452-0.html"
-                                                                    title="气体检测"><img
-                                                                        src="/static/5_X200341_20150714193315.jpg"
-                                                                        alt="气体检测" border="0"></a></span></div>
-                                                    <p>
-                                                        <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858439-176452-0.html"
-                                                           title="气体检测">气体检测</a></p></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="remove"></div>
-                                </div>
-                            </div>
-                            <div id="sidebar-follow" class="lx l_bot box_shadow" style="top: 0px; position: static;">
-                                <div class="block_title">
-                                    <div class="name left_name">
-                                        <a href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html" title="联系我们">联系我们</a>
-                                    </div>
-                                </div>
-                                <div class="lx_box">
-                                    <p>
-                                        <a href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html" title="">
-                                            <img src="/static/0_Y200-2500-27_0_15_20170929175627.jpg"
-                                                 border="0" width="186" alt="联系"></a><br>
-                                    </p>
-                                    <p>
-                                        <b>深圳市综元量测精密仪器仪表公司</b></p>
-                                    <p>
-                                        <span>电话：</span>0755-28095986 27044610</p>
-                                    <p>
-                                        <span>传真：</span>0755-27044610 87879778</p>
-                                    <p>
-                                        <span>邮箱：</span>fuwangtuliao@163.com</p>
-                                    <p>
-                                        <span>地址：</span>中国广东省深圳市南山区电子 开发区A18-8楼(邮 编：518000)</p>
-                                    <p>
-                                        <span>网址：</span>Y200.up71.com</p>
-                                </div>
-                            </div>
-
+                            {% include './component/tjNews.swig' %}
+                            {% include './component/connection.swig' %}
                         </div>
                     </div>
                 </div>

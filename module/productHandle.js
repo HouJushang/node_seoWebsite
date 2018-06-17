@@ -11,6 +11,8 @@ module.exports = async function (websiteId, categoryId, page) {
     const banner = bannerQuery.allBanner(websiteId, 'product')
     const productCategory = categoryQuery.allProductCategory(websiteId)
     const currentCategory = await categoryQuery.getDetail(categoryId)
+    const tjNews = newsQuery.getTjNews(websiteId)
+    const tjProduct = productQuery.topList(websiteId)
 
     let productList
     if (currentCategory.child_ids) {
@@ -28,6 +30,8 @@ module.exports = async function (websiteId, categoryId, page) {
             currentCategory,
             banner: await banner,
             webInfo: await webInfo,
+            tjNews: await tjNews,
+            tjProduct: await tjProduct,
             topCategory: await topCategory,
             productCategory: await productCategory,
             productList: await productList,

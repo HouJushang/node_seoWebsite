@@ -54,61 +54,8 @@
                                 </div>
                             </li>
                         </ul>
-                        <div id="CategoryPage_Left1_CategoryPage_Recommend1_palclass">
-
-                            {#<div class="news_list_n l_bot box_shadow">#}
-                            {#<div class="block_title">#}
-                            {#<div class="name left_name">#}
-                            {#<a href="http://y200-2500-27.jz60.com/cn/categorypage-925101-1.html" alt="推荐资讯" title="推荐资讯">推荐资讯</a></div>#}
-                            {#</div>#}
-                            {#<div class="news_list_n_box">#}
-                            {#<div>#}
-                            {#<ul id="categoryPageRecommend">#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230635-1.html" title="深圳宝安一次性酒店柔巾卷批发">深圳宝安一次性酒店柔巾卷.</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230671-1.html" title="批发供应高级酒店/柔巾卷/冷热湿毛巾">批发供应高级酒店/柔巾卷/.</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230672-1.html" title="批发酒店环保冷热湿毛巾">批发酒店环保冷热湿毛巾</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230673-1.html" title="环保柔巾卷70克x20米x12卷箱">环保柔巾卷70克x20米x12卷.</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230674-1.html" title="批发酒店/宾馆医院冷热湿毛巾">批发酒店/宾馆医院冷热湿.</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230675-1.html" title="湖南长沙一次性清洁湿巾卷代理">湖南长沙一次性清洁湿巾卷.</a> </li>#}
-                            {#<li><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230676-1.html" title="90克16米卷|河北石家庄一次性养生环保毛巾加盟">90克16米卷|河北石家庄一</a></li>#}
-                            {#<li style="border: none;"><a href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230677-1.html" title="爱康一次环保湿巾片">爱康一次环保湿巾片</a> </li>#}
-                            {#</ul>#}
-                            {#</div>#}
-                            {#</div>#}
-                            {#</div>#}
-
-                        </div>
-                        <div id="CategoryPage_Left1_Contact_Left2_palclass">
-
-                            <div id="sidebar-follow" class="lx l_bot box_shadow" style="top: 0px; position: static;">
-                                <div class="block_title">
-                                    <div class="name left_name">
-                                        <span title="联系我们">联系我们</span>
-                                    </div>
-                                </div>
-                                <div class="lx_box">
-                                    <p>
-                                        <a title="">
-                                            <img src="/static/0_Y200-2500-27_0_15_20170929175627.jpg" border="0"
-                                                 width="186" alt="联系">
-                                        </a><br>
-                                    </p>
-                                    <p>
-                                        <b>{{ webInfo.company }}</b></p>
-                                    <p>
-                                        <span>电话：</span>{{ webInfo.phone }}</p>
-                                    <p>
-                                        <span>传真：</span>{{ webInfo.fax }}</p>
-                                    <p>
-                                        <span>邮箱：</span>{{ webInfo.email }}</p>
-                                    <p>
-                                        <span>地址：</span>{{ webInfo.address }}</p>
-                                    <p>
-                                        <span>网址：</span>{{ webInfo.web }}</p>
-                                </div>
-                            </div>
-
-                        </div>
+                        {% include './component/tjNews.swig' %}
+                        {% include './component/connection.swig' %}
                     </div>
                     <div class="profgh"></div>
                     <div class="y3_right_01 box_shadow">
@@ -129,8 +76,10 @@
                                             <a href="/w-{{ websiteId }}/newsd-{{ item.id }}.html"
                                                title="{{ item.title }}">
                                                 {% if item.thumb %}
-                                                <img class="img_hover" src="{{ item.thumb }} alt="{{ item.title }}" border="0"></a></span>
-                                        {% endif %}
+                                                <img class="img_hover" src="{{ item.thumb }}" alt="{{ item.title }}" border="0">
+                                                {% endif %}
+                                            </a>
+                                        </span>
                                     </div>
                                     <div class="news_title">
                                         <a href="/w-{{ websiteId }}/newsd-{{ item.id }}.html" title="{{ item.title }}">
@@ -139,7 +88,7 @@
                                         {{ item.description }}
                                     </p>
                                     <span class="news_time">
-                                        {#{{ item.createdAt }}#}
+                                        {{ item.createdAt | date("Y-m-d")}}
                                     </span>
                                 </div>
                             {% endfor %}

@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const productModel = _loadModel('productModel')
 module.exports = class {
-    //首页推荐产品
+    //推荐产品
     static topList (websiteId){
         return productModel.findAll({
             where: {

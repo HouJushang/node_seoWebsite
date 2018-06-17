@@ -5,6 +5,10 @@ const newsDetailHandle = require('./newsDetailHandle')
 const productHandle = require('./productHandle')
 const productDetailHandle = require('./productDetailHandle')
 
+router.get('/', async (ctx) => {
+    ctx.body = await ctx.render('seo')
+})
+
 router.get('/:webSite/index.html', async (ctx) => {
     try {
         const webSiteId = ctx.params.webSite.split('-')[1];

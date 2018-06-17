@@ -15,6 +15,8 @@ module.exports = async function (websiteId, type, newsId) {
     const allCategory = categoryQuery.allList(websiteId)
     const topNewsCategory = categoryQuery.topNewsCategory(websiteId)
     const newsDetail = await newsQuery.getDetail(newsId)
+    const tjNews = newsQuery.getTjNews(websiteId)
+
 
 
     const currentCategory = categoryQuery.getDetail(newsDetail.categoryId)
@@ -28,6 +30,7 @@ module.exports = async function (websiteId, type, newsId) {
             allCategory: await allCategory,
             topProduct: await topProduct,
             link: await link,
+            tjNews: await tjNews,
             banner: await banner,
             webInfo: await webInfo,
             topCategory: await topCategory,

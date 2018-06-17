@@ -3,6 +3,7 @@ const webInfoQuery = _loadQuery('webInfoQuery')
 const bannerQuery = _loadQuery('bannerQuery')
 const productQuery = _loadQuery('productQuery')
 const indexQuery = _loadQuery('indexQuery')
+const newsQuery = _loadQuery('newsQuery')
 
 module.exports = async function (websiteId, type, productId) {
     const webInfo = webInfoQuery.getWebInfo(websiteId)
@@ -13,6 +14,7 @@ module.exports = async function (websiteId, type, productId) {
     const topNewsCategory = categoryQuery.topNewsCategory(websiteId)
     const productCategory = categoryQuery.allProductCategory(websiteId)
     const productDetail = await productQuery.getDetail(productId)
+    const tjNews = newsQuery.getTjNews(websiteId)
 
 
     const currentCategory = categoryQuery.getDetail(productDetail.categoryId)
@@ -27,6 +29,7 @@ module.exports = async function (websiteId, type, productId) {
             allCategory: await allCategory,
             topProduct: await topProduct,
             banner: await banner,
+            tjNews: await tjNews,
             webInfo: await webInfo,
             topCategory: await topCategory,
             topNewsCategory: await topNewsCategory,

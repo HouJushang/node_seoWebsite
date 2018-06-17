@@ -38,4 +38,20 @@ module.exports = class {
         })
     }
 
+    static getTjNews(websiteId){
+        return newsModel.findAll({
+            where: {
+                websiteId: websiteId,
+                position: {
+                    [Op.like]: '%1%'
+                }
+            },
+            offset: 0,
+            limit: 10,
+            order: [
+                ['id', 'DESC'],
+            ],
+        })
+    }
+
 }

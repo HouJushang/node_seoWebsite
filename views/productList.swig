@@ -70,35 +70,8 @@
                                 {% endif %}
                             {% endfor %}
                         </ul>
-
-                        <div id="sidebar-follow" class="lx l_bot box_shadow">
-                            <div class="block_title">
-                                <div class="name left_name">
-                                    <a href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html"
-                                       title="联系我们">联系我们</a>
-                                </div>
-                            </div>
-                            <div class="lx_box">
-                                <p>
-                                    <a href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html" title="">
-                                        <img src="/static/0_Y200-2500-27_0_15_20170929175627.jpg" border="0" width="186"
-                                             alt="联系"></a><br>
-                                </p>
-                                <p>
-                                    <b>{{ webInfo.company }}</b></p>
-                                <p>
-                                    <span>电话：</span>{{ webInfo.phone }}</p>
-                                <p>
-                                    <span>传真：</span>{{ webInfo.fax }}</p>
-                                <p>
-                                    <span>邮箱：</span>{{ webInfo.email }}</p>
-                                <p>
-                                    <span>地址：</span>{{ webInfo.address }}</p>
-                                <p>
-                                    <span>网址：</span>{{ webInfo.web }}</p>
-                            </div>
-                        </div>
-
+                        {% include './component/tjNews.swig' %}
+                        {% include './component/connection.swig' %}
                     </div>
                 </div>
                 <div class="profgh"></div>
@@ -106,7 +79,7 @@
                     <div class="block_title">
                             <span class="location">
                             您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
-                                        href="/w-{{ websiteId }}/newsl-{{ currentCategory.id }}.html"
+                                        href="/w-{{ websiteId }}/productl-{{ currentCategory.id }}.html"
                                         title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
                         <div class="name">
                             <span title="{{ currentCategory.name }}">{{ currentCategory.name }}</span></div>
@@ -176,43 +149,21 @@
                                 <div class="cplist">
                                     <div>
                                         <ul id="contentlistRecommend">
-                                            <li>
-                                                <div class="pic"><span><a
-                                                                href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858431-176451-206768.html"
-                                                                title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"><img
-                                                                    src="/static/5_X200_20150716143738.jpg"
-                                                                    alt="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"
-                                                                    border="0"></a></span></div>
-                                                <p>
-                                                    <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858431-176451-206768.html"
-                                                       title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司">测量仪器、量具量仪分.</a></p>
-                                            </li>
+                                            {% for item in tjProduct %}
+                                                <li>
+                                                    <div class="pic">
+                                                        <span>
+                                                            <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html" title="{{ item.title }}">
+                                                                <img src="{{ String(item.image).split(',')[0] }}" alt="" border="0"></a></span></div>
+                                                    <p>
+                                                        <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
+                                                           title="{{ item.title }}">{{ item.title }}</a></p>
+                                                </li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                     <div class="remove">
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="cp_nweslist r_t_12">
-                                <div class="block_title"><span class="location_a"> <a
-                                                href="http://y200-2500-27.jz60.com/cn/categorypage-925101-1.html"
-                                                class="gd" alt="更多" title="更多">更多</a></span>
-                                    <div class="name"><a
-                                                href="http://y200-2500-27.jz60.com/cn/categorypage-925101-1.html"
-                                                alt="最新资讯" title="最新资讯">最新资讯</a></div>
-                                </div>
-                                <div class="bottomnewslist">
-                                    <ul>
-
-                                        <li><span class="news_time2">2014-04-28</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230635-1.html"
-                                                    title="深圳宝安一次性酒店柔巾卷批发">
-                                                深圳宝安一次性酒店柔巾卷批发</a></li>
-
-                                        <div class="remove"></div>
-                                    </ul>
-                                    <div class="remove"></div>
                                 </div>
                             </div>
                         </div>
@@ -226,60 +177,4 @@
     </div>
     <div class="remove"></div>
 </div>
-<div id="Bottom1_pl_Bottom">
-
-    <div class="footer_box">
-        <div class="bottom d12">
-            <div class="subnav wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                <div id="subnav_f">
-                    <a title="网站首页" href="http://y200-2500-27.jz60.com/cn/index-925101.html">网站首页</a><a title="产品展示"
-                                                                                                        href="http://y200-2500-27.jz60.com/cn/product-925101.html">产品展示</a><a
-                            title="客户见证"
-                            href="http://y200-2500-27.jz60.com/cn/singleclassimage-925101-1.html">客户见证</a><a
-                            title="公司动态" href="http://y200-2500-27.jz60.com/cn/categorypage-925101-1.html">公司动态</a><a
-                            title="在线下载" href="http://y200-2500-27.jz60.com/cn/down-925101.html">在线下载</a><a title="联系我们"
-                                                                                                            href="http://y200-2500-27.jz60.com/cn/singlepage-925101-2.html">联系我们</a>
-                </div>
-            </div>
-
-            <div class="footer wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                <div class="bottom_logo"><img src="/static/0_Y200-2500-27_0_11_20170929175626.gif" border="0"
-                                              alt="logo"></div>
-                <div class="copyright">
-                    <p>
-                        CopyRight © 2014 www.zk71.com All Rights Reserved. 深圳市综元量测精密仪器仪表公司<br>
-                        咨询热线：0755-28095986 0755-27044610 电子邮箱：fuwangtuliao@163.com</p>
-                    <br>
-                </div>
-                <div class="approve"><img src="/static/0_Y200-2500-27_0_13_20170929175626.gif" border="0" alt="二维码">
-                </div>
-                <div class="remove"></div>
-            </div>
-            <div class="zk_f wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                <p>
-                    技术支持：<a href="http://www.jz60.com/" target="_brank" title="建站专家">建站专家</a> | <a
-                            href="http://www.zk71.com/" target="_brank" title="中科商务网">中科商务网</a>
-                    <script>
-                        (function () {
-                            var bp = document.createElement('script');
-                            var curProtocol = window.location.protocol.split(':')[0];
-                            if (curProtocol === 'https') {
-                                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                            }
-                            else {
-                                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                            }
-                            var s = document.getElementsByTagName("script")[0];
-                            s.parentNode.insertBefore(bp, s);
-                        })();
-                    </script>&nbsp;|&nbsp;<a href="http://login.jz60.com/?userinfo_id=925101" title="网站管理"
-                                             target="_brank">网站管理</a></p>
-            </div>
-        </div>
-    </div>
-
-</div>
-</form>
-
-<div id="topcontrol" title="TOP" style="position: fixed; bottom: 20px; right: 20px; opacity: 1; cursor: pointer;"><img
-            src="/static/top.jpg" style="width:30px; height:33px"></div></body></html>
+{% endblock %}
