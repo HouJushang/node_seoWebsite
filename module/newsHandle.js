@@ -1,7 +1,7 @@
 const categoryQuery = _loadQuery('categoryQuery')
 const webInfoQuery = _loadQuery('webInfoQuery')
 const bannerQuery = _loadQuery('bannerQuery')
-const productQuery = _loadQuery('productQuery')
+// const productQuery = _loadQuery('productQuery')
 const indexQuery = _loadQuery('indexQuery')
 const linkQuery = _loadQuery('linkQuery')
 const newsQuery = _loadQuery('newsQuery')
@@ -10,12 +10,20 @@ module.exports = async function (websiteId, type, categoryId, page) {
     const webInfo = webInfoQuery.getWebInfo(websiteId)
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, type)
-    const topProduct = productQuery.topList(websiteId)
+    // const topProduct = productQuery.topList(websiteId)
     const link = linkQuery.getAllLink(websiteId)
-    const currentCategory = categoryQuery.getDetail(categoryId)
     const allCategory = categoryQuery.allList(websiteId)
     const topNewsCategory = categoryQuery.topNewsCategory(websiteId)
-    const newsList = newsQuery.getNewsByCategoty(categoryId, {currentPage:1 , pageSize: 10})
+    const currentCategory = await categoryQuery.getDetail(categoryId)
+
+    let newsList = null;
+    if (currentCategory.child_ids) {
+        const catArr = currentCategory.child_ids.split(',')
+        catArr.push(categoryId)
+        newsList = newsQuery.getAllNews(catArr, {currentPage:1 , pageSize: 10})
+    } else {
+        newsList = newsQuery.getNewsByCategoty(categoryId, {currentPage:1 , pageSize: 10})
+    }
 
     const result = {
         template: 'newsList',
@@ -23,7 +31,7 @@ module.exports = async function (websiteId, type, categoryId, page) {
             websiteId,
             currentCategory: await currentCategory,
             allCategory: await allCategory,
-            topProduct: await topProduct,
+            // topProduct: await topProduct,
             link: await link,
             banner: await banner,
             webInfo: await webInfo,

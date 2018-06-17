@@ -3,7 +3,7 @@ const Op = Sequelize.Op
 const newsModel = _loadModel('newsModel')
 module.exports = class {
     static async getNewsByCategoty(categoryId, pageInfo) {
-        return newsModel.findAll({
+        return newsModel.findAndCountAll({
             where: {
                 categoryId: categoryId
             },
@@ -20,6 +20,21 @@ module.exports = class {
             where: {
                 id
             }
+        })
+    }
+
+    static getAllNews(categoryIdArr, pageInfo) {
+        return newsModel.findAndCountAll({
+            where: {
+                categoryId: {
+                    [Op.in]: categoryIdArr,
+                }
+            },
+            offset: (pageInfo.currentPage - 1) * pageInfo.pageSize,
+            limit: pageInfo.pageSize,
+            order: [
+                ['id', 'DESC'],
+            ],
         })
     }
 

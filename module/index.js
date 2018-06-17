@@ -3,6 +3,7 @@ const newsHandle = require('./newsHandle')
 const indexHandle = require('./indexHandle')
 const newsDetailHandle = require('./newsDetailHandle')
 const productHandle = require('./productHandle')
+const productDetailHandle = require('./productDetailHandle')
 
 router.get('/:webSite/index.html', async (ctx) => {
     try {
@@ -33,6 +34,12 @@ router.get('/:webSite/*.html', async (ctx) => {
         if(pathInfo[0] === 'productl'){
             const page = pathInfo[2] || 1;
             const result =await productHandle(webSiteId, pathInfo[1], page)
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+        if(pathInfo[0] === 'productd'){
+            const page = pathInfo[2] || 1;
+            const result =await productDetailHandle(webSiteId, 'product', page)
             ctx.body = await ctx.render(result.template, result.data)
             return
         }

@@ -32,4 +32,40 @@ module.exports = class {
         })
     }
 
+    static async getAllProductByCategoty(categoryId, pageInfo) {
+        return productModel.findAndCountAll({
+            where: {
+                categoryId: categoryId
+            },
+            offset: (pageInfo.currentPage - 1) * pageInfo.pageSize,
+            limit: pageInfo.pageSize,
+            order: [
+                ['id', 'DESC'],
+            ],
+        })
+    }
+
+    static getAllProduct(categoryIdArr, pageInfo) {
+        return productModel.findAndCountAll({
+            where: {
+                categoryId: {
+                    [Op.in]: categoryIdArr,
+                }
+            },
+            offset: (pageInfo.currentPage - 1) * pageInfo.pageSize,
+            limit: pageInfo.pageSize,
+            order: [
+                ['id', 'DESC'],
+            ],
+        })
+    }
+
+    static getDetail(id) {
+        return productModel.findOne({
+            where: {
+                id
+            }
+        })
+    }
+
 }

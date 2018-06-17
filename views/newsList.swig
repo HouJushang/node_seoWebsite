@@ -39,7 +39,7 @@
                     <div class="pages_left y3_fl_left">
                         <ul class="left_nav box_shadow">
                             <li class="Current"><span class="left_nav_top">
-               <a href="">
+               <a href="/w-{{ websiteId }}/newsl-{{ topNewsCategory.id }}.html">
                    {{ topNewsCategory.name }}
                </a></span>
                                 <div class="ejfl">
@@ -119,7 +119,7 @@
                         </div>
                         <div class="block_box news_pic_list r_12">
 
-                            {% for item in newsList %}
+                            {% for item in newsList.rows %}
                                 <div class="picture_list new_list_r">
                                     <div id="rptCategoryPage_ctl00_piclist" class="pic">
                                         <span>

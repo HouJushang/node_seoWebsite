@@ -115,134 +115,19 @@
 
                             <div class="cplist">
                                 <ul>
-
-                                    {% for item in productList %}
+                                    {% for item in productList.rows %}
                                         <li>
                                             <div class="pic"><span>
                                                     <a title="{{ item.name }}"
-                                                                      href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858430-176451.html"><img
-                                                                src="/static/2_X200_20150716142135.jpg" border="0"
-                                                                alt="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器"
-                                                                title="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器"></a></span></div>
-                                            <p><a title="三坐标|轮廓仪|光谱仪|无锡市密测多友精密仪器"
-                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858430-176451.html">三坐标|轮廓仪|光谱仪|无.</a>
+                                                                      href="/w-{{ websiteId }}/productd-{{ item.id }}.html"><img
+                                                                src="{{ String(item.image).split(',')[0] }}" border="0"
+                                                                alt="{{ item.title }}"
+                                                                title="{{ item.title }}"></a></span></div>
+                                            <p><a title="{{ item.title }}"
+                                                  href="/w-{{ websiteId }}/productd-{{ item.id }}.html">{{ item.title }}</a>
                                             </p>
                                         </li>
                                     {% endfor %}
-
-
-                                    <li>
-                                        <div class="pic"><span><a title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858431-176451.html"><img
-                                                            src="/static/2_X200_20150716143738.jpg" border="0"
-                                                            alt="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"
-                                                            title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"></a></span></div>
-                                        <p><a title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858431-176451.html">测量仪器、量具量仪分部|.</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="煤炭检测精密仪器/量热仪原理/量热仪分类"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858432-176451.html"><img
-                                                            src="/static/2_X200581_20150714193333.gif" border="0"
-                                                            alt="煤炭检测精密仪器/量热仪原理/量热仪分类" title="煤炭检测精密仪器/量热仪原理/量热仪分类"></a></span>
-                                        </div>
-                                        <p><a title="煤炭检测精密仪器/量热仪原理/量热仪分类"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858432-176451.html">煤炭检测精密仪器/量热仪.</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="高低温试验箱"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858433-176451.html"><img
-                                                            src="/static/2_X200261_20150714193314.jpg" border="0"
-                                                            alt="高低温试验箱" title="高低温试验箱"></a></span></div>
-                                        <p><a title="高低温试验箱"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858433-176451.html">高低温试验箱</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="高低温试验箱"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858434-176452.html"><img
-                                                            src="/static/2_X200269_20150714193314.jpg" border="0"
-                                                            alt="高低温试验箱" title="高低温试验箱"></a></span></div>
-                                        <p><a title="高低温试验箱"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858434-176452.html">高低温试验箱</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="通仪表"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858435-176457.html"><img
-                                                            src="/static/2_X200381_20150714193325.jpg" border="0"
-                                                            alt="通仪表" title="通仪表"></a></span></div>
-                                        <p><a title="通仪表"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858435-176457.html">通仪表</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="检测器"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858436-176452.html"><img
-                                                            src="/static/2_X200365_20150714193322.jpg" border="0"
-                                                            alt="检测器" title="检测器"></a></span></div>
-                                        <p><a title="检测器"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858436-176452.html">检测器</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="综元量仪器"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858437-176452.html"><img
-                                                            src="/static/2_X200277_20150714193314.jpg" border="0"
-                                                            alt="综元量仪器" title="综元量仪器"></a></span></div>
-                                        <p><a title="综元量仪器"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858437-176452.html">综元量仪器</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="综元量仪器表"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858438-176452.html"><img
-                                                            src="/static/2_X200357_20150714193318.jpg" border="0"
-                                                            alt="综元量仪器表" title="综元量仪器表"></a></span></div>
-                                        <p><a title="综元量仪器表"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858438-176452.html">综元量仪器表</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="气体检测"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858439-176452.html"><img
-                                                            src="/static/2_X200341_20150714193315.jpg" border="0"
-                                                            alt="气体检测" title="气体检测"></a></span></div>
-                                        <p><a title="气体检测"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858439-176452.html">气体检测</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="矿用仪表"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858440-176456.html"><img
-                                                            src="/static/2_X200389_20150714193328.jpg" border="0"
-                                                            alt="矿用仪表" title="矿用仪表"></a></span></div>
-                                        <p><a title="矿用仪表"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858440-176456.html">矿用仪表</a>
-                                        </p>
-                                    </li>
-
-                                    <li>
-                                        <div class="pic"><span><a title="自动化仪表"
-                                                                  href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858441-176455.html"><img
-                                                            src="/static/2_X200421_20150714193330.gif" border="0"
-                                                            alt="自动化仪表" title="自动化仪表"></a></span></div>
-                                        <p><a title="自动化仪表"
-                                              href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858441-176455.html">自动化仪表</a>
-                                        </p>
-                                    </li>
-
                                 </ul>
                                 <div class="remove"></div>
                                 <div class="Pagebox r_t_12">
@@ -281,8 +166,6 @@
                             </div>
                             <div class="cp_xg r_t_12">
                                 <div class="block_title">
-        <span class="location_a"> <a class="h_h" href="javascript:GetPagingDataRecommend();" title="换一组">
-            换一组</a></span>
                                     <div class="name">
                                         <a href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-1.html"
                                            title="推荐产品">推荐产品</a></div>
@@ -320,32 +203,6 @@
                                                     <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858448-176451-206768.html"
                                                        title="设备数据采集、故障分析及管理系统">设备数据采集、故障分.</a></p></li>
                                         </ul>
-                                        <script type="text/javascript">
-                                            var pageIndex = 2;
-
-                                            function GetPagingDataRecommend() {
-                                                $.ajax({
-                                                    type: "Post",
-                                                    url: "/cn/product.aspx/GetData",
-                                                    contentType: "application/json; charset=utf-8",
-                                                    dataType: "json",
-                                                    data: "{pageIndex:" + pageIndex + ",loadPageSize:3,loadUserInfo_ID:925101,loadProductStatus_ID:1}",
-                                                    success: function (data) {
-                                                        if (data.d == "") {
-                                                            alert("没有更多数据加载了！");
-                                                        } else {
-                                                            $("#contentlistRecommend").html(data.d);
-                                                            pageIndex++;
-                                                        }
-                                                        ;
-                                                    },
-                                                    error: function (err) {
-                                                        alert(err);
-                                                    }
-                                                });
-                                            }
-                                        </script>
-
                                     </div>
                                     <div class="remove">
                                     </div>

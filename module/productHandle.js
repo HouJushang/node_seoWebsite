@@ -3,7 +3,6 @@ const webInfoQuery = _loadQuery('webInfoQuery')
 const bannerQuery = _loadQuery('bannerQuery')
 const productQuery = _loadQuery('productQuery')
 const indexQuery = _loadQuery('indexQuery')
-const linkQuery = _loadQuery('linkQuery')
 const newsQuery = _loadQuery('newsQuery')
 
 module.exports = async function (websiteId, categoryId, page) {
@@ -11,21 +10,22 @@ module.exports = async function (websiteId, categoryId, page) {
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, 'product')
     const productCategory = categoryQuery.allProductCategory(websiteId)
-    const link = linkQuery.getAllLink(websiteId)
-    const currentCategory = categoryQuery.getDetail(categoryId)
+    const currentCategory = await categoryQuery.getDetail(categoryId)
 
     let productList
-    if (currentCategory.level == 1){
-         productList = productQuery.allList2(websiteId)
+    if (currentCategory.child_ids) {
+        const catArr = currentCategory.child_ids.split(',')
+        catArr.push(categoryId)
+        productList = productQuery.getAllProduct(catArr, {currentPage:1 , pageSize: 10})
     } else {
-         productList = productQuery.allList(categoryId)
+        productList = productQuery.getAllProductByCategoty(categoryId, {currentPage:1 , pageSize: 10})
     }
+
     const result = {
         template: 'productList',
         data: {
             websiteId,
-            currentCategory: await currentCategory,
-            link: await link,
+            currentCategory,
             banner: await banner,
             webInfo: await webInfo,
             topCategory: await topCategory,

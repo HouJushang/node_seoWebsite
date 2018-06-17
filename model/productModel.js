@@ -4,7 +4,18 @@ const categoryModel = require('./categoryModel')
 const webSite = require('./webSiteModel')
 const productModel = sequelize.define('product', {
     id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
-    image: { type: Sequelize.STRING, allowNull: true },
+    image: { type: Sequelize.STRING, allowNull: true,
+        get: function() {
+            const imgValue = this.getDataValue('image')
+            if(imgValue){
+                const result = imgValue.split(',')
+                console.log(result)
+                return result
+            } else {
+                return []
+            }
+        }
+    },
     title: { type: Sequelize.STRING, allowNull: false },
     brand: { type: Sequelize.STRING, allowNull: false },
     price: { type: Sequelize.DECIMAL(18, 2) , allowNull: true },

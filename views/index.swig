@@ -216,7 +216,7 @@
                                             <div class="news_list">
                                                 <div id="list_none" class="common_li">
                                                     <ul>
-                                                        {% for item2 in item.newsList %}
+                                                        {% for item2 in item.newsList.rows %}
                                                             <li>
                                                                 <a href="/w-{{ websiteId }}/newsd-{{ item2.id }}.html"
                                                                    title="{{ item2.title }}">{{ item2.title }}</a>

@@ -164,9 +164,9 @@
                 </div>
                 <div class="block_box ProductInfo">
                     <div class="ArticleTitle">
-                        <h1>深圳宝安一次性酒店柔巾卷批发</h1>
+                        <h1>{{ newsDetail.title }}</h1>
                     </div>
-                    <div class="ReleaseDate">发布日期：2014-04-28 15:32:17</div>
+                    <div class="ReleaseDate">发布日期：{{ newsDetail.createdAt | date('Y-m-d') }}</div>
                     <div class="ArticleContent">
                         {{ newsDetail.content }}
                     </div>
