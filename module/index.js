@@ -4,6 +4,8 @@ const indexHandle = require('./indexHandle')
 const newsDetailHandle = require('./newsDetailHandle')
 const productHandle = require('./productHandle')
 const productDetailHandle = require('./productDetailHandle')
+const aboutHandle = require('./aboutHandle')
+const aboutDetailHandle = require('./aboutDetailHandle')
 
 router.get('/', async (ctx) => {
     ctx.body = await ctx.render('seo')
@@ -47,6 +49,18 @@ router.get('/:webSite/*.html', async (ctx) => {
             ctx.body = await ctx.render(result.template, result.data)
             return
         }
+        if(pathInfo[0] === 'aboutl'){
+            const result =await aboutHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'aboutd'){
+            const result =await aboutDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
         ctx.body = await ctx.render('error')
     } catch (e) {
         console.log(e)

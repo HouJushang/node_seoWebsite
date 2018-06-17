@@ -48,7 +48,7 @@
                 <div class="container w1000">
                     <div class="topnav">
                         <ul>
-                            <li style="width:98px;" id="index457683233" class="Current"><a style="width:98px;" href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a></li>
+                            <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a></li>
                             {% for item in topCategory %}
                                 <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html" title="网站首页">{{ item.name }}</a></li>
                             {% endfor %}

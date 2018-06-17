@@ -84,7 +84,7 @@
                                                     <div class="pic">
                                                 <span><a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
                                                          title="{{ item.title }}">
-                                                <img src="{{ item.image }}" border="0"></a></span>
+                                                <img src="{{ String(item.image).split(',')[0] }}" border="0"></a></span>
                                                     </div>
                                                     <p>
                                                         <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
