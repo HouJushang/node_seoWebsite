@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-    <title>{{ webInfo.title }} {% block seoTile %}{% endblock %}</title>
+    <title>{% block seoTile %}{% endblock %}{{ webInfo.title }}</title>
     <meta name="keywords" content="{{ webInfo.keywords }}">
     <meta name="description" content="{{ webInfo.description }}">
     <link href="/static/css.css" type="text/css" rel="stylesheet">

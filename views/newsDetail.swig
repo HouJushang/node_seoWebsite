@@ -1,4 +1,7 @@
 {% extends "./layout.swig" %}
+{% block seoTile %}
+    {{ newsDetail.title }}-
+{% endblock %}
 {% block content %}
     <link href="/static/A(1).css" rel="stylesheet">
     <script src="/static/a(1).js" type="text/javascript"></script>
@@ -158,7 +161,7 @@
                         <span class="location">
                             您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
                                     href="/w-{{ websiteId }}/newsl-{{ currentCategory.id }}.html"
-                                    title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
+                                    title="{{ currentCategory.name }}">{{ currentCategory.name }}</a> > {{ newsDetail.title }}</span>
                     <div class="name">
                         <span title="{{ currentCategory.name }}">{{ currentCategory.name }}</span></div>
                 </div>
@@ -168,7 +171,7 @@
                     </div>
                     <div class="ReleaseDate">发布日期：{{ newsDetail.createdAt | date('Y-m-d') }}</div>
                     <div class="ArticleContent">
-                        {{ newsDetail.content }}
+                        {% autoescape %}{{ newsDetail.content }}{% endautoescape %}
                     </div>
                     <div class="Thenext">
                         {#<span class="on">上一篇：没有上一篇了</span>#}

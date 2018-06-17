@@ -1,4 +1,7 @@
 {% extends "./layout.swig" %}
+{% block seoTile %}
+    {{ currentCategory.name }}列表-
+{% endblock %}
 {% block content %}
     <link href="/static/A(1).css" rel="stylesheet">
     <script src="/static/a(1).js" type="text/javascript"></script>

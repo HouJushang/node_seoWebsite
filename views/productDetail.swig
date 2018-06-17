@@ -1,4 +1,7 @@
 {% extends "./layout.swig" %}
+{% block seoTile %}
+    {{ productDetail.title }}-
+{% endblock %}
 {% block content %}
     <link href="/static/A(1).css" rel="stylesheet">
     <script src="/static/a(1).js" type="text/javascript"></script>

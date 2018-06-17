@@ -1,4 +1,7 @@
 {% extends "./layout.swig" %}
+{% block seoTile %}
+    {{ currentCategory.name }}列表-
+{% endblock %}
 {% block content %}
 <link href="/static/A(1).css" rel="stylesheet">
 <script src="/static/a(1).js" type="text/javascript"></script>
@@ -119,7 +122,7 @@
                                         <li>
                                             <div class="pic"><span>
                                                     <a title="{{ item.name }}"
-                                                                      href="/w-{{ websiteId }}/productd-{{ item.id }}.html"><img
+                                                       href="/w-{{ websiteId }}/productd-{{ item.id }}.html"><img
                                                                 src="{{ String(item.image).split(',')[0] }}" border="0"
                                                                 alt="{{ item.title }}"
                                                                 title="{{ item.title }}"></a></span></div>
@@ -130,38 +133,38 @@
                                     {% endfor %}
                                 </ul>
                                 <div class="remove"></div>
-                                <div class="Pagebox r_t_12">
-                                    <table border="0" align="center" cellpadding="0" cellspacing="0">
-                                        <tbody>
-                                        <tr>
-                                            <td align="center" class="PageStyle">
+                                {#<div class="Pagebox r_t_12">#}
+                                {#<table border="0" align="center" cellpadding="0" cellspacing="0">#}
+                                {#<tbody>#}
+                                {#<tr>#}
+                                {#<td align="center" class="PageStyle">#}
 
-                                                <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
-                                                <div id="ctl02_ctl00_anpPaging">
-                                                    <a disabled="true">首页</a><a disabled="true">上页</a><span class="cpb">1</span><a
-                                                            href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-2.html">2</a><a
-                                                            href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-3.html">3</a><a
-                                                            href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-2.html">下页</a><a
-                                                            href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-3.html">末页</a>&nbsp;&nbsp;转到第&nbsp;<input
-                                                            type="text" value="1" class="inputbox"
-                                                            name="ctl02$ctl00$anpPaging_input"
-                                                            id="ctl02$ctl00$anpPaging_input"
-                                                            onkeydown="ANP_keydown(event,&#39;ctl02$ctl00$anpPaging_btn&#39;);"
-                                                            style="width:30px;">&nbsp;页&nbsp;<input type="Button"
-                                                                                                    name="ctl02$ctl00$anpPaging"
-                                                                                                    id="ctl02$ctl00$anpPaging_btn"
-                                                                                                    value="跳转"
-                                                                                                    class="btnGo"
-                                                                                                    onclick="if(ANP_checkInput(&#39;ctl02$ctl00$anpPaging_input&#39;,3)){ANP_goToPage(document.getElementById(&#39;ctl02$ctl00$anpPaging_input&#39;));}">
-                                                </div>
-                                                <!-- AspNetPager V6.0.0 for VS2005 End -->
+                                {#<!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->#}
+                                {#<div id="ctl02_ctl00_anpPaging">#}
+                                {#<a disabled="true">首页</a><a disabled="true">上页</a><span class="cpb">1</span><a#}
+                                {#href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-2.html">2</a><a#}
+                                {#href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-3.html">3</a><a#}
+                                {#href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-2.html">下页</a><a#}
+                                {#href="http://y200-2500-27.jz60.com/cn/product-925101-0-0-0-0-3.html">末页</a>&nbsp;&nbsp;转到第&nbsp;<input#}
+                                {#type="text" value="1" class="inputbox"#}
+                                {#name="ctl02$ctl00$anpPaging_input"#}
+                                {#id="ctl02$ctl00$anpPaging_input"#}
+                                {#onkeydown="ANP_keydown(event,&#39;ctl02$ctl00$anpPaging_btn&#39;);"#}
+                                {#style="width:30px;">&nbsp;页&nbsp;<input type="Button"#}
+                                {#name="ctl02$ctl00$anpPaging"#}
+                                {#id="ctl02$ctl00$anpPaging_btn"#}
+                                {#value="跳转"#}
+                                {#class="btnGo"#}
+                                {#onclick="if(ANP_checkInput(&#39;ctl02$ctl00$anpPaging_input&#39;,3)){ANP_goToPage(document.getElementById(&#39;ctl02$ctl00$anpPaging_input&#39;));}">#}
+                                {#</div>#}
+                                {#<!-- AspNetPager V6.0.0 for VS2005 End -->#}
 
 
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                {#</td>#}
+                                {#</tr>#}
+                                {#</tbody>#}
+                                {#</table>#}
+                                {#</div>#}
                                 <div class="remove"></div>
                             </div>
                             <div class="cp_xg r_t_12">
@@ -182,26 +185,8 @@
                                                                     border="0"></a></span></div>
                                                 <p>
                                                     <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858431-176451-206768.html"
-                                                       title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司">测量仪器、量具量仪分.</a></p></li>
-                                            <li>
-                                                <div class="pic"><span><a
-                                                                href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858432-176451-206768.html"
-                                                                title="煤炭检测精密仪器/量热仪原理/量热仪分类"><img
-                                                                    src="/static/5_X200581_20150714193333.gif"
-                                                                    alt="煤炭检测精密仪器/量热仪原理/量热仪分类" border="0"></a></span>
-                                                </div>
-                                                <p>
-                                                    <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858432-176451-206768.html"
-                                                       title="煤炭检测精密仪器/量热仪原理/量热仪分类">煤炭检测精密仪器/量.</a></p></li>
-                                            <li>
-                                                <div class="pic"><span><a
-                                                                href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858448-176451-206768.html"
-                                                                title="设备数据采集、故障分析及管理系统"><img
-                                                                    src="/static/5_X200501_20150714193332.jpg"
-                                                                    alt="设备数据采集、故障分析及管理系统" border="0"></a></span></div>
-                                                <p>
-                                                    <a href="http://y200-2500-27.jz60.com/cn/product_detail-925101-1858448-176451-206768.html"
-                                                       title="设备数据采集、故障分析及管理系统">设备数据采集、故障分.</a></p></li>
+                                                       title="测量仪器、量具量仪分部|上海精密仪器仪表有限公司">测量仪器、量具量仪分.</a></p>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="remove">
@@ -224,61 +209,6 @@
                                                     href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230635-1.html"
                                                     title="深圳宝安一次性酒店柔巾卷批发">
                                                 深圳宝安一次性酒店柔巾卷批发</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230636-4.html"
-                                                    title="90克16米卷|河北石家庄一次性养生环保毛巾加盟">
-                                                90克16米卷|河北石家庄一次性养生环保毛</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230637-4.html"
-                                                    title="一次性养生毛巾|河北石家庄一次性环保湿巾代理">
-                                                一次性养生毛巾|河北石家庄一次性环保湿.</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230638-4.html"
-                                                    title="宾馆一次性环保毛巾|河北石家庄一次性酒店湿巾卷厂家">
-                                                宾馆一次性环保毛巾|河北石家庄一次性酒.</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230639-4.html"
-                                                    title="足疗环保擦脚毛巾加盟咨询15907161332">
-                                                足疗环保擦脚毛巾加盟咨询15907161332.</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230640-4.html"
-                                                    title="广东深圳一次性推油毛巾代理">
-                                                广东深圳一次性推油毛巾代理</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230641-4.html"
-                                                    title="河北石家庄一次性酒店柔巾卷批发">
-                                                河北石家庄一次性酒店柔巾卷批发</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230642-4.html"
-                                                    title="保健 养生 舒适新型 一次性毛巾招商">
-                                                保健 养生 舒适新型 一次性毛巾招商</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230643-4.html"
-                                                    title="保健|毛巾养生 舒适新型一次性毛巾定做">
-                                                保健|毛巾养生 舒适新型一次性毛巾定做</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230644-4.html"
-                                                    title="柔巾卷保健 养生 舒适新型一次性毛巾送货上门">
-                                                柔巾卷保健 养生 舒适新型一次性毛巾送货.</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230645-4.html"
-                                                    title="湿巾机 爱森湿巾机 湖北总代理招商">
-                                                湿巾机 爱森湿巾机 湖北总代理招商</a></li>
-
-                                        <li><span class="news_time2">2014-04-25</span><a
-                                                    href="http://y200-2500-27.jz60.com/cn/categorypage_detail-925101-230646-4.html"
-                                                    title="武汉爱康|湿巾机|专用湿巾卷|加盟招商">
-                                                武汉爱康|湿巾机|专用湿巾卷|加盟招商</a></li>
 
                                         <div class="remove"></div>
                                     </ul>
