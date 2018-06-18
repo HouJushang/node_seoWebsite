@@ -47,7 +47,7 @@
                                 {% if item.level == 1 %}
                                     <li>
                                         <div class="nav_title">
-                                            <a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html"
+                                            <a href="/{{ item.type }}l-{{ item.id }}.html"
                                                title="产品分类">{{ item.name }}</a>
                                         </div>
                                     </li>
@@ -55,12 +55,12 @@
                                 {% if item.level == 2 %}
                                     <li>
                                             <span class="nav_one">
-                                                <a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html"
+                                                <a href="/{{ item.type }}l-{{ item.id }}.html"
                                                    title="{{ item.name }}">{{ item.name }}</a></span>
                                         <div class="ejfl">
                                             {% for item in productCategory %}
                                                 {% if item.level == 3 %}
-                                                    <span><a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html"
+                                                    <span><a href="/{{ item.type }}l-{{ item.id }}.html"
                                                              title="{{ itemname }}">{{ item.name }}</a></span>
                                                 {% endif %}
                                             {% endfor %}
@@ -78,8 +78,8 @@
                 <div class="y3_right_01 box_shadow">
                     <div class="block_title">
                             <span class="location">
-                            您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
-                                        href="/w-{{ websiteId }}/productl-{{ currentCategory.id }}.html"
+                            您的位置：<a href="/index.html" title="网站首页">网站首页</a> &gt; <a
+                                        href="/productl-{{ currentCategory.id }}.html"
                                         title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
                         <div class="name">
                             <span title="{{ currentCategory.name }}">{{ currentCategory.name }}</span></div>
@@ -95,12 +95,12 @@
                                         <li>
                                             <div class="pic"><span>
                                                     <a title="{{ item.name }}"
-                                                       href="/w-{{ websiteId }}/productd-{{ item.id }}.html"><img
+                                                       href="/productd-{{ item.id }}.html"><img
                                                                 src="{{ String(item.image).split(',')[0] }}" border="0"
                                                                 alt="{{ item.title }}"
                                                                 title="{{ item.title }}"></a></span></div>
                                             <p><a title="{{ item.title }}"
-                                                  href="/w-{{ websiteId }}/productd-{{ item.id }}.html">{{ item.title }}</a>
+                                                  href="/productd-{{ item.id }}.html">{{ item.title }}</a>
                                             </p>
                                         </li>
                                     {% endfor %}
@@ -153,10 +153,10 @@
                                                 <li>
                                                     <div class="pic">
                                                         <span>
-                                                            <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html" title="{{ item.title }}">
+                                                            <a href="/productd-{{ item.id }}.html" title="{{ item.title }}">
                                                                 <img src="{{ String(item.image).split(',')[0] }}" alt="" border="0"></a></span></div>
                                                     <p>
-                                                        <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
+                                                        <a href="/productd-{{ item.id }}.html"
                                                            title="{{ item.title }}">{{ item.title }}</a></p>
                                                 </li>
                                             {% endfor %}

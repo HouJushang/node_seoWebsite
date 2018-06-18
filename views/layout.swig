@@ -35,7 +35,7 @@
                 <div class="container w1000">
                     <div id="Top1_ctl01_pl_ViewSortClass2" corpsite_valuenum="299" sortclass1_valuenum="10002" data-type="2">
                         <div id="Top1_ctl01_ctl00_toplogo" class="logo" style="float:left;">
-                            <div id="Top1_ctl01_ctl00_top_logo"><a title="Logo" href="/w-{{ websiteId }}/index.html" target="_self"><img src="{{ webInfo.logoImg }}" border="0" alt="Logo"></a></div>
+                            <div id="Top1_ctl01_ctl00_top_logo"><a title="Logo" href="/index.html" target="_self"><img src="{{ webInfo.logoImg }}" border="0" alt="Logo"></a></div>
                             <div class="remove"></div>
                         </div><div id="Top1_ctl01_ctl01_topright" class="tel" style="float:right;">
                             <div id="Top1_ctl01_ctl01_tel_top"><img src="{{ webInfo.phoneImg }}" border="0" alt="客服热线" title="客服热线"></div>
@@ -48,9 +48,9 @@
                 <div class="container w1000">
                     <div class="topnav">
                         <ul>
-                            <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a></li>
+                            <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/index.html" title="网站首页">网站首页</a></li>
                             {% for item in topCategory %}
-                                <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html" title="网站首页">{{ item.name }}</a></li>
+                                <li style="width:98px;" id="index457683233"><a style="width:98px;" href="/{{ item.type }}l-{{ item.id }}.html" title="网站首页">{{ item.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>

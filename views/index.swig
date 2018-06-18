@@ -52,7 +52,7 @@
                                             <div class="ejfl">
                                                 {% for item in productCategory %}
                                                     {% if item.level == 3 %}
-                                                        <span><a href="/w-{{ websiteId }}/{{ item.type }}l-{{ item.id }}.html"
+                                                        <span><a href="/{{ item.type }}l-{{ item.id }}.html"
                                                                  title="{{ itemname }}">{{ item.name }}</a></span>
                                                     {% endif %}
                                                 {% endfor %}
@@ -82,12 +82,12 @@
                                             {% for item in topProduct %}
                                                 <li>
                                                     <div class="pic">
-                                                <span><a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
+                                                <span><a href="/productd-{{ item.id }}.html"
                                                          title="{{ item.title }}">
                                                 <img src="{{ String(item.image).split(',')[0] }}" border="0"></a></span>
                                                     </div>
                                                     <p>
-                                                        <a href="/w-{{ websiteId }}/productd-{{ item.id }}.html"
+                                                        <a href="/productd-{{ item.id }}.html"
                                                            title="{{ item.title }}">{{ item.title }}</a>
                                                     </p>
                                                 </li>
@@ -189,10 +189,10 @@
                                          data-wow-delay="0.3s">
                                         <div class="block_title">
                                             <span class="location_a">
-                                                <a href="/w-{{ websiteId }}/newsl-{{ item.id }}.html" title="{{ item.name }}">更多</a>
+                                                <a href="/newsl-{{ item.id }}.html" title="{{ item.name }}">更多</a>
                                             </span>
                                             <div class="name">
-                                                <a href="/w-{{ websiteId }}/newsl-{{ item.id }}.html"
+                                                <a href="/newsl-{{ item.id }}.html"
                                                    title="{{ item.name }}">{{ item.name }}</a>
                                             </div>
                                         </div>
@@ -200,16 +200,16 @@
                                             {% if item.firstNews %}
                                             <div class="news_illustration">
                                                 <div class="newpic"><span><a
-                                                                href="/w-{{ websiteId }}/newsd-{{ item.firstNews.id }}.html"
+                                                                href="/newsd-{{ item.firstNews.id }}.html"
                                                                 title="{{ item.firstNews.title }}"><img
                                                                     src="{{ item.firstNews.thumb }}"
                                                                     alt="{{ item.firstNews.title }}"></a></span></div>
-                                                <a href="/w-{{ websiteId }}/newsd-{{ item.firstNews.id }}.html"
+                                                <a href="/newsd-{{ item.firstNews.id }}.html"
                                                    title="{{ item.firstNews.title }}"><h3
                                                             class="index_new_title">{{ item.firstNews.title }}</h3>
                                                 </a>
                                                 <p class="index_new">{{ item.firstNews.description }}<a
-                                                            href="/w-{{ websiteId }}/newsd-{{ item.firstNews.id }}.html"
+                                                            href="/newsd-{{ item.firstNews.id }}.html"
                                                             title="{{ item.firstNews.title }}" class="xiangxi">[详细]</a>
                                                 </p>
                                                 <div class="remove">
@@ -221,7 +221,7 @@
                                                     <ul>
                                                         {% for item2 in item.newsList.rows %}
                                                             <li>
-                                                                <a href="/w-{{ websiteId }}/newsd-{{ item2.id }}.html"
+                                                                <a href="/newsd-{{ item2.id }}.html"
                                                                    title="{{ item2.title }}">{{ item2.title }}</a>
                                                             </li>
                                                         {% endfor %}

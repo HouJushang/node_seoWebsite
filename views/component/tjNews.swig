@@ -9,7 +9,7 @@
                 <ul id="categoryPageRecommend">
                     {% for item in tjNews %}
                     <li>
-                        <a href="/w-{{ websiteId }}/newsd-{{ item.id }}.html" title="{{ item.title }}">
+                        <a href="/newsd-{{ item.id }}.html" title="{{ item.title }}">
                             {{ item.title }}
                         </a>
                     </li>

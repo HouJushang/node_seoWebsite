@@ -41,10 +41,10 @@
 
             <div class="pages_left y3_fl_left">
                 <ul class="left_nav box_shadow">
-                    <li class="Current"><span><a href="/w-{{ websiteId }}/aboutl-{{ currentCategory.id }}.html">关于我们</a></span>
+                    <li class="Current"><span><a href="/aboutl-{{ currentCategory.id }}.html">关于我们</a></span>
                         <div class="ejfl">
                             {% for item in allAbout %}
-                            <span><a href="/w-{{ websiteId }}/aboutd-{{ item.id }}.html"
+                            <span><a href="/aboutd-{{ item.id }}.html"
                                      title="{{ item.title }}">{{ item.title }}</a></span>
                             {% endfor %}
                             <div class="remove"></div>
@@ -58,8 +58,8 @@
             <div class="y3_right_01 box_shadow">
                 <div class="block_title">
     <span class="location">
-        您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
-                href="/w-{{ websiteId }}/aboutl-{{ currentCategory.id }}.html"
+        您的位置：<a href="/index.html" title="网站首页">网站首页</a> &gt; <a
+                href="/aboutl-{{ currentCategory.id }}.html"
                 title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
                     <div class="name">{{ currentCategory.name }}</div>
                 </div>

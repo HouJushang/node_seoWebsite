@@ -42,12 +42,12 @@
                     <div class="pages_left y3_fl_left">
                         <ul class="left_nav box_shadow">
                             <li class="Current"><span class="left_nav_top">
-               <a href="/w-{{ websiteId }}/newsl-{{ topNewsCategory.id }}.html">
+               <a href="/newsl-{{ topNewsCategory.id }}.html">
                    {{ topNewsCategory.name }}
                </a></span>
                                 <div class="ejfl">
                                     {% for item in allCategory %}
-                                        <span><a href="/w-{{ websiteId }}/newsl-{{ item.id }}.html"
+                                        <span><a href="/newsl-{{ item.id }}.html"
                                                  title="{{ item.name }}">{{ item.name }}</a></span>
                                     {% endfor %}
                                     <div class="remove"></div>
@@ -61,8 +61,8 @@
                     <div class="y3_right_01 box_shadow">
                         <div class="block_title">
                             <span class="location">
-                            您的位置：<a href="/w-{{ websiteId }}/index.html" title="网站首页">网站首页</a> &gt; <a
-                                    href="/w-{{ websiteId }}/newsl-{{ currentCategory.id }}.html"
+                            您的位置：<a href="/index.html" title="网站首页">网站首页</a> &gt; <a
+                                    href="/newsl-{{ currentCategory.id }}.html"
                                     title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
                             <div class="name">
                                 <span title="{{ currentCategory.name }}">{{ currentCategory.name }}</span></div>
@@ -73,7 +73,7 @@
                                 <div class="picture_list new_list_r">
                                     <div id="rptCategoryPage_ctl00_piclist" class="pic">
                                         <span>
-                                            <a href="/w-{{ websiteId }}/newsd-{{ item.id }}.html"
+                                            <a href="/newsd-{{ item.id }}.html"
                                                title="{{ item.title }}">
                                                 {% if item.thumb %}
                                                 <img class="img_hover" src="{{ item.thumb }}" alt="{{ item.title }}" border="0">
@@ -82,7 +82,7 @@
                                         </span>
                                     </div>
                                     <div class="news_title">
-                                        <a href="/w-{{ websiteId }}/newsd-{{ item.id }}.html" title="{{ item.title }}">
+                                        <a href="/newsd-{{ item.id }}.html" title="{{ item.title }}">
                                             {{ item.title }}</a></div>
                                     <p class="al_p">
                                         {{ item.description }}
