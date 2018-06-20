@@ -8,5 +8,10 @@ require('./newsModel')
 require('./productModel')
 require('./webInfoModel')
 require('./webSiteModel')
+require('./jobModel')
+require('./resolveModel')
+require('./serviceModel')
+require('./successModel')
+require('./thostModel')
 
 module.exports = sequelize;

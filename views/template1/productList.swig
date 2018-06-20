@@ -1,4 +1,4 @@
-{% extends "./layout.swig" %}
+{% extends "layout.swig" %}
 {% block seoTile %}
     {{ currentCategory.name }}列表-
 {% endblock %}
@@ -70,8 +70,8 @@
                                 {% endif %}
                             {% endfor %}
                         </ul>
-                        {% include './component/tjNews.swig' %}
-                        {% include './component/connection.swig' %}
+                        {% include '../component/tjNews.swig' %}
+                        {% include '../component/connection.swig' %}
                     </div>
                 </div>
                 <div class="profgh"></div>

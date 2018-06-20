@@ -1,4 +1,4 @@
-{% extends "./layout.swig" %}
+{% extends "layout.swig" %}
 {% block seoTile %}
     {{ newsDetail.title }}-
 {% endblock %}
@@ -52,8 +52,8 @@
                             </div>
                         </li>
                     </ul>
-                    {% include './component/tjNews.swig' %}
-                    {% include './component/connection.swig' %}
+                    {% include '../component/tjNews.swig' %}
+                    {% include '../component/connection.swig' %}
                 </div>
             </div>
             <div class="profgh"></div>

@@ -7,7 +7,10 @@ module.exports = class {
             where: {
                 level: 1,
                 websiteId: websiteId
-            }
+            },
+            order: [
+                ['order', 'DESC'],
+            ],
         })
     }
 

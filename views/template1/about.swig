@@ -1,4 +1,4 @@
-{% extends "./layout.swig" %}
+{% extends "layout.swig" %}
 {% block seoTile %}
     关于我们-
 {% endblock %}
@@ -41,31 +41,31 @@
 
             <div class="pages_left y3_fl_left">
                 <ul class="left_nav box_shadow">
-                    <li class="Current"><span><a href="/aboutl-{{ currentCategory.id }}.html">关于我们</a></span>
+                    <li class="Current"><span><a href="/{{ currentCategory.type }}l-{{ currentCategory.id }}.html">{{ currentCategory.name }}</a></span>
                         <div class="ejfl">
                             {% for item in allAbout %}
-                            <span><a href="/aboutd-{{ item.id }}.html"
+                            <span><a href="/{{ currentCategory.type }}d-{{ item.id }}.html"
                                      title="{{ item.title }}">{{ item.title }}</a></span>
                             {% endfor %}
                             <div class="remove"></div>
                         </div>
                     </li>
                 </ul>
-                {% include './component/tjNews.swig' %}
-                {% include './component/connection.swig' %}
+                {% include '../component/tjNews.swig' %}
+                {% include '../component/connection.swig' %}
             </div>
             <div class="profgh"></div>
             <div class="y3_right_01 box_shadow">
                 <div class="block_title">
     <span class="location">
         您的位置：<a href="/index.html" title="网站首页">网站首页</a> &gt; <a
-                href="/aboutl-{{ currentCategory.id }}.html"
+                href="/{{ currentCategory.type }}l-{{ currentCategory.id }}.html"
                 title="{{ currentCategory.name }}">{{ currentCategory.name }}</a></span>
                     <div class="name">{{ currentCategory.name }}</div>
                 </div>
                 <div class="y5_abou_us_box">
                     <div class="single_page_box">
-                        {% autoescape %}{{ aboutDetail.content }}{% endautoescape %}
+                        {% autoescape %}{{ currentCategory.description }}{% endautoescape %}
                     </div>
                 </div>
                 <div class="remove"></div>

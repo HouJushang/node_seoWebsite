@@ -2,8 +2,25 @@ const router = require('./router');
 const newsHandle = require('./newsHandle')
 const indexHandle = require('./indexHandle')
 const newsDetailHandle = require('./newsDetailHandle')
+
 const productHandle = require('./productHandle')
 const productDetailHandle = require('./productDetailHandle')
+
+const resolveHandle = require('./resolveHandle')
+const resolveDetailHandle = require('./resolveDetailHandle')
+
+const serviceHandle = require('./serviceHandle')
+const serviceDetailHandle = require('./serviceDetailHandle')
+
+const successHandle = require('./successHandle')
+const successDetailHandle = require('./successDetailHandle')
+
+const thostHandle = require('./thostHandle')
+const thostDetailHandle = require('./thostDetailHandle')
+
+const jobDetailHandle = require('./jobDetailHandle')
+const jobHandle = require('./jobHandle')
+
 const aboutHandle = require('./aboutHandle')
 const aboutDetailHandle = require('./aboutDetailHandle')
 
@@ -57,6 +74,67 @@ router.get('/:webSite/*.html', async (ctx) => {
 
         if(pathInfo[0] === 'aboutd'){
             const result =await aboutDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        //--------------------------
+        if(pathInfo[0] === 'successl'){
+            const result =await successHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'successd'){
+            const result =await serviceDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'jobl'){
+            const result =await jobHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'jobd'){
+            const result =await jobDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'resolvel'){
+            const result =await resolveHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'resolved'){
+            const result =await resolveDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'thostl'){
+            const result =await thostHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'thostd'){
+            const result =await thostDetailHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'servicel'){
+            const result =await serviceHandle(webSiteId, pathInfo[1])
+            ctx.body = await ctx.render(result.template, result.data)
+            return
+        }
+
+        if(pathInfo[0] === 'serviced'){
+            const result =await serviceDetailHandle(webSiteId, pathInfo[1])
             ctx.body = await ctx.render(result.template, result.data)
             return
         }

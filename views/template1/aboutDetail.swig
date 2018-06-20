@@ -1,4 +1,4 @@
-{% extends "./layout.swig" %}
+{% extends "layout.swig" %}
 {% block seoTile %}
     关于我们-
 {% endblock %}
@@ -38,10 +38,9 @@
 <div id="main">
     <div class="procount">
         <div class="w1002">
-
             <div class="pages_left y3_fl_left">
                 <ul class="left_nav box_shadow">
-                    <li class="Current"><span><a href="/aboutl-{{ currentCategory.id }}.html">关于我们</a></span>
+                    <li class="Current"><span><a href="/aboutl-{{ currentCategory.id }}.html">{{ currentCategory.name }}</a></span>
                         <div class="ejfl">
                             {% for item in allAbout %}
                             <span><a href="/aboutd-{{ item.id }}.html"
@@ -51,8 +50,8 @@
                         </div>
                     </li>
                 </ul>
-                {% include './component/tjNews.swig' %}
-                {% include './component/connection.swig' %}
+                {% include '../component/tjNews.swig' %}
+                {% include '../component/connection.swig' %}
             </div>
             <div class="profgh"></div>
             <div class="y3_right_01 box_shadow">
@@ -65,7 +64,7 @@
                 </div>
                 <div class="y5_abou_us_box">
                     <div class="single_page_box">
-                        {% autoescape %}{{ currentCategory.description }}{% endautoescape %}
+                        {% autoescape %}{{ aboutDetail.content }}{% endautoescape %}
                     </div>
                 </div>
                 <div class="remove"></div>

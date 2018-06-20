@@ -3,6 +3,7 @@ const sequelize = _loadSequelize();
 const webSite = require('./webSiteModel')
 const webInfoModel = sequelize.define('webInfo', {
     id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+    template: {type: Sequelize.STRING, allowNull: false},
     title: { type: Sequelize.STRING, allowNull: false },
     description: { type: Sequelize.STRING, allowNull: false },
     keywords: { type: Sequelize.STRING, allowNull: false },

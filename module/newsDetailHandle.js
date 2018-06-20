@@ -7,7 +7,6 @@ const linkQuery = _loadQuery('linkQuery')
 const newsQuery = _loadQuery('newsQuery')
 
 module.exports = async function (websiteId, type, newsId) {
-    const webInfo = webInfoQuery.getWebInfo(websiteId)
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, type)
     const topProduct = productQuery.topList(websiteId)
@@ -17,12 +16,11 @@ module.exports = async function (websiteId, type, newsId) {
     const newsDetail = await newsQuery.getDetail(newsId)
     const tjNews = newsQuery.getTjNews(websiteId)
 
-
-
     const currentCategory = categoryQuery.getDetail(newsDetail.categoryId)
+    const webInfo = await webInfoQuery.getWebInfo(websiteId)
 
     const result = {
-        template: 'newsDetail',
+        template:`${webInfo.template}/newsDetail`,
         data: {
             websiteId,
             newsDetail,
@@ -32,7 +30,7 @@ module.exports = async function (websiteId, type, newsId) {
             link: await link,
             tjNews: await tjNews,
             banner: await banner,
-            webInfo: await webInfo,
+            webInfo: webInfo,
             topCategory: await topCategory,
             topNewsCategory: await topNewsCategory,
             currentCategory: await currentCategory

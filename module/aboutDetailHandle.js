@@ -7,25 +7,24 @@ const newsQuery = _loadQuery('newsQuery')
 const aboutQuery = _loadQuery('aboutQuery')
 
 module.exports = async function (websiteId, detailId) {
-    const webInfo = webInfoQuery.getWebInfo(websiteId)
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, 'about')
     const tjNews = newsQuery.getTjNews(websiteId)
-
-    const aboutDetail = await aboutQuery.getDetail(detailId)
-
+    const aboutDetail = await
+    aboutQuery.getDetail(detailId)
     const allAbout = aboutQuery.getAllAbout(aboutDetail.categoryId)
     const currentCategory = categoryQuery.getDetail(aboutDetail.categoryId)
+    const webInfo = await webInfoQuery.getWebInfo(websiteId)
 
     const result = {
-        template: 'aboutDetail',
+        template: `${webInfo.template}/aboutDetail`,
         data: {
             aboutDetail,
             websiteId,
             currentCategory: await currentCategory,
             banner: await banner,
             tjNews: await tjNews,
-            webInfo: await webInfo,
+            webInfo: webInfo,
             allAbout: await allAbout,
             topCategory: await topCategory,
         }

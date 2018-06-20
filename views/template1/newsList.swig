@@ -1,4 +1,4 @@
-{% extends "./layout.swig" %}
+{% extends "layout.swig" %}
 {% block seoTile %}
     {{ currentCategory.name }}列表-
 {% endblock %}
@@ -54,8 +54,8 @@
                                 </div>
                             </li>
                         </ul>
-                        {% include './component/tjNews.swig' %}
-                        {% include './component/connection.swig' %}
+                        {% include '../component/tjNews.swig' %}
+                        {% include '../component/connection.swig' %}
                     </div>
                     <div class="profgh"></div>
                     <div class="y3_right_01 box_shadow">

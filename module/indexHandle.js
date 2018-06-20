@@ -7,7 +7,6 @@ const linkQuery = _loadQuery('linkQuery')
 const newsQuery = _loadQuery('newsQuery')
 
 module.exports = async function (websiteId, type) {
-    const webInfo = webInfoQuery.getWebInfo(websiteId)
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const productCategory = categoryQuery.allIndexProductCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, type)
@@ -22,8 +21,9 @@ module.exports = async function (websiteId, type) {
         })
         item.firstNews = item.newsList.shift()
     })
+    const webInfo = await webInfoQuery.getWebInfo(websiteId)
     const result = {
-        template: 'index',
+        template:`${webInfo.template}/index`,
         data: {
             websiteId,
             allIndexNewsCategory,
@@ -31,7 +31,7 @@ module.exports = async function (websiteId, type) {
             topProduct: await topProduct,
             link: await link,
             banner: await banner,
-            webInfo: await webInfo,
+            webInfo: webInfo,
             productCategory: await productCategory,
             topCategory: await topCategory,
             categoryId: 'index'

@@ -4,13 +4,15 @@ const bannerQuery = _loadQuery('bannerQuery')
 const productQuery = _loadQuery('productQuery')
 const indexQuery = _loadQuery('indexQuery')
 const newsQuery = _loadQuery('newsQuery')
-const aboutQuery = _loadQuery('aboutQuery')
+const successQuery = _loadQuery('successQuery')
 
 module.exports = async function (websiteId, categoryId) {
     const topCategory = categoryQuery.allTopCategory(websiteId)
     const banner = bannerQuery.allBanner(websiteId, 'about')
     const tjNews = newsQuery.getTjNews(websiteId)
-    const allAbout = aboutQuery.getAllAbout(categoryId)
+    const allAbout = successQuery.getAllAbout(categoryId)
+
+
     const currentCategory = categoryQuery.getDetail(categoryId)
     const webInfo = await webInfoQuery.getWebInfo(websiteId)
 

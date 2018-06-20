@@ -11,6 +11,7 @@ const categoryModel = sequelize.define('category', {
     keywords: { type: Sequelize.STRING, allowNull: false },
     position: { type: Sequelize.STRING, allowNull: true },
     type: { type: Sequelize.STRING, allowNull: true },
+    order: {type: Sequelize.INTEGER, allowNull: true, defaultValue: 0},
     websiteId: {
         type: Sequelize.INTEGER,
         references: {
